@@ -11,6 +11,11 @@ well:
 * sudo
 * bash
 * curl
+* gmake
+* llvm-devel
+* gdb
+* lang/gcc
+* devel/premake5
 
 Except for the root user, there's one additional user, `runner`, which is the
 user that will be running the commands in the GitHub action. This user is
@@ -22,11 +27,11 @@ The following architectures and versions are supported:
 
 | Version | x86-64 | ARM64 |
 |---------|--------|-------|
-| 13.2    | ✓      | ✓     |
-| 13.1    | ✓      | ✓     |
-| 13.0    | ✓      | ✓     |
-| 12.4    | ✓      | ✓     |
-| 12.2    | ✓      | ✗     |
+| 13.2    | ✓      | ✗     |
+| 13.1    | ✓      | ✗     |
+| 13.0    | ✗      | ✗     |
+| 12.4    | ✗      | ✗     |
+| 12.2    | ✗      | ✗     |
 
 ## Building Locally
 

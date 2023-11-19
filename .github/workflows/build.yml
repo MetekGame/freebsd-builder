@@ -41,7 +41,7 @@ jobs:
 
     steps:
       - name: Clone Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4.1.1
         with:
           persist-credentials: false
 
@@ -51,7 +51,7 @@ jobs:
           apt install curl jq unzip \
           "qemu-system-${{ matrix.architecture.qemu }}" -y
 
-      - uses: hashicorp/setup-packer@main
+      - uses: hashicorp/setup-packer@2.0.1
         with:
           version: "1.9.1"
 
@@ -79,10 +79,8 @@ jobs:
       - name: Create Release
         id: create_release
         if: startsWith(github.ref, 'refs/tags/v')
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v0.1.15
         with:
           name: FreeBSD ${{ steps.version.outputs.VERSION }}
           draft: true
           files: output/*
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

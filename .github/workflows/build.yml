@@ -51,7 +51,7 @@ jobs:
           apt install curl jq unzip \
           "qemu-system-${{ matrix.architecture.qemu }}" -y
 
-      - uses: hashicorp/setup-packer@2.0.1
+      - uses: hashicorp/setup-packer@v2.0.1
         with:
           version: "1.9.1"
 

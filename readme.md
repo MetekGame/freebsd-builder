@@ -14,7 +14,6 @@ well:
 * gmake
 * llvm-devel
 * gdb
-* lang/gcc
 * devel/premake5
 
 Except for the root user, there's one additional user, `runner`, which is the

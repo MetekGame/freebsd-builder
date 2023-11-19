@@ -9,7 +9,7 @@ else
   exit 1
 fi
 
-DISTRIBUTIONS='kernel.txz base.txz'
+DISTRIBUTIONS='kernel.txz base.txz lib32.txz'
 HOSTNAME=freebsd
 
 #!/bin/sh
